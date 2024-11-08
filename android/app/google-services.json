@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1013173236119",
+    "project_id": "arbeit-fesdem-project",
+    "storage_bucket": "arbeit-fesdem-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013173236119:android:12502e65e7fe1402af94d2",
+        "android_client_info": {
+          "package_name": "com.example.arbeit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCy8w-pLg2TfSAcrWdUrqC9oqcXlfVgTEA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
