@@ -1,7 +1,7 @@
 import 'package:arbeit/constants/routes.dart';
 import 'package:arbeit/pages/policy_page_twentyfive.dart';
 import 'package:arbeit/pages/terms_page_twentyfour.dart';
-import 'package:arbeit/pages/user_information_page_twentyseven.dart';
+import 'package:arbeit/features/auth/pages/profile_info.dart/user_status.dart';
 import 'package:arbeit/styles/app_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -121,7 +121,7 @@ class RegistrationPage extends StatelessWidget {
                 GestureDetector(
                   onTap: () {
                     Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => UserInfo()));
+                        MaterialPageRoute(builder: (context) => UserStatus()));
                   },
                   child: Container(
                       height: 47,

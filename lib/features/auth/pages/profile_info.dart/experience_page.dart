@@ -1,4 +1,4 @@
-import 'package:arbeit/pages/skills_page_nine.dart';
+import 'package:arbeit/features/auth/pages/profile_info.dart/skills_page.dart';
 import 'package:flutter/material.dart';
 import 'package:arbeit/styles/app_colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -8,10 +8,10 @@ class ExperiencePage extends StatefulWidget {
   const ExperiencePage({super.key});
 
   @override
-  State<ExperiencePage> createState() => _experiencePageState();
+  State<ExperiencePage> createState() => _ExperiencePageState();
 }
 
-class _experiencePageState extends State<ExperiencePage> {
+class _ExperiencePageState extends State<ExperiencePage> {
   @override
   Widget build(BuildContext context) {
     MediaQuery.of(context).size.height;

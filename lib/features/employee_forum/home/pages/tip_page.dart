@@ -43,7 +43,7 @@ class TipPage extends StatelessWidget {
                 height: 183,
                 width: double.infinity,
                 child: Image.asset(
-                  'asset/images/job_tips_2.png',
+                  'asset/images/sec_job_tip.png',
                   height: 183,
                   width: double.infinity,
                   fit: BoxFit.cover,

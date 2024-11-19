@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:arbeit/styles/app_colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class ResetPassword extends StatelessWidget {
-  const ResetPassword({super.key});
+class ResetPasswordPage extends StatelessWidget {
+  const ResetPasswordPage({super.key});
 
   @override
   Widget build(BuildContext context) {

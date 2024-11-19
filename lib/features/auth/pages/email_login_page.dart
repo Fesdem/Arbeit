@@ -1,5 +1,5 @@
 import 'package:arbeit/constants/routes.dart';
-import 'package:arbeit/pages/forgot_password_page_eleven.dart';
+import 'package:arbeit/features/auth/pages/forgot_password_page.dart';
 import 'package:arbeit/pages/policy_page_twentyfive.dart';
 import 'package:arbeit/pages/terms_page_twentyfour.dart';
 import 'package:arbeit/pages/user_information_two.dart';
@@ -7,8 +7,8 @@ import 'package:arbeit/styles/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class EmailPage extends StatelessWidget {
-  const EmailPage({super.key});
+class EmailLoginPage extends StatelessWidget {
+  const EmailLoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -72,8 +72,11 @@ class EmailPage extends StatelessWidget {
                     alignment: Alignment.centerRight,
                     child: TextButton(
                       onPressed: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => ForgetPage()));
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => ForgetPasswordPage(),
+                          ),
+                        );
                       },
                       child: Text(
                         'Forgot Password?',

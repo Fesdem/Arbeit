@@ -1,4 +1,4 @@
-import 'package:arbeit/pages/appearance_page_twentyone.dart';
+import 'package:arbeit/pages/appearance_page.dart';
 import 'package:arbeit/pages/help_page_twentythree.dart';
 import 'package:arbeit/pages/notification_page.dart';
 import 'package:arbeit/pages/security_page_twentytwo.dart';

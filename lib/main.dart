@@ -1,25 +1,25 @@
+import 'package:arbeit/constants/animations/first_splash_page.dart';
+import 'package:arbeit/constants/animations/welcome_splash_page.dart';
 import 'package:arbeit/constants/routes.dart';
-import 'package:arbeit/pages/application_page_sixteen.dart';
-import 'package:arbeit/pages/congrats_page_ten.dart';
-import 'package:arbeit/pages/email_page5.dart';
-import 'package:arbeit/pages/experience_page_eight.dart';
-import 'package:arbeit/pages/forgot_page_twelve.dart';
-import 'package:arbeit/pages/forgot_password_page_eleven.dart';
-import 'package:arbeit/pages/home_page.dart';
-import 'package:arbeit/pages/first_page1.dart';
-import 'package:arbeit/pages/login_page4.dart';
-import 'package:arbeit/pages/main_page_fourteen.dart';
-import 'package:arbeit/pages/main_page_two.dart';
-import 'package:arbeit/pages/password_reset_thirteen.dart';
-import 'package:arbeit/pages/profile_page6.dart';
-import 'package:arbeit/pages/profile_page7.dart';
-import 'package:arbeit/pages/profile_page_seventeen.dart';
-import 'package:arbeit/pages/profile_view_eighteen.dart';
-import 'package:arbeit/pages/registration_page3.dart';
-import 'package:arbeit/pages/skills_page_nine.dart';
-import 'package:arbeit/pages/tip_page_fifteen.dart';
-import 'package:arbeit/pages/user_information_page_twentyseven.dart';
-import 'package:arbeit/pages/welcome_page2.dart';
+import 'package:arbeit/features/employee_forum/application/pages/application_page.dart';
+import 'package:arbeit/features/auth/pages/reg_done_page.dart';
+import 'package:arbeit/features/auth/pages/email_login_page.dart';
+import 'package:arbeit/features/auth/pages/profile_info.dart/experience_page.dart';
+import 'package:arbeit/features/auth/pages/recover_password_page.dart';
+import 'package:arbeit/features/auth/pages/forgot_password_page.dart';
+import 'package:arbeit/features/employee_forum/home/pages/home_page.dart';
+import 'package:arbeit/features/auth/pages/login_page.dart';
+import 'package:arbeit/features/employee_forum/main_page.dart';
+import 'package:arbeit/features/employer_forum/employer_main_page.dart';
+import 'package:arbeit/features/auth/pages/reset_password_page.dart';
+import 'package:arbeit/features/auth/pages/profile_info.dart/personal_info_page.dart';
+import 'package:arbeit/features/auth/pages/profile_info.dart/education_info_page.dart';
+import 'package:arbeit/features/profile/pages/profile_page.dart';
+import 'package:arbeit/features/profile/pages/view_profile_page.dart';
+import 'package:arbeit/features/auth/pages/registration_page.dart';
+import 'package:arbeit/features/auth/pages/profile_info.dart/skills_page.dart';
+import 'package:arbeit/features/employee_forum/home/pages/tip_page.dart';
+import 'package:arbeit/features/auth/pages/profile_info.dart/user_status.dart';
 import 'package:arbeit/styles/app_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -41,27 +41,27 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: firstPage,
       routes: {
-        firstPage: (context) => FirstPage(),
-        welcomePage: (context) => WelcomePage(),
+        firstPage: (context) => FirstSplashPage(),
+        welcomePage: (context) => WelcomeSplashPage(),
         registrationPage: (context) => RegistrationPage(),
         loginPage: (context) => LoginPage(),
         homePage: (context) => HomePage(),
-        emailPage: (context) => EmailPage(),
-        completionPage: (context) => CompletionPage(),
-        educationPage: (context) => EducationPage(),
+        emailPage: (context) => EmailLoginPage(),
+        completionPage: (context) => PersonalInfoPage(),
+        educationPage: (context) => EducationInfoPage(),
         experiencePage: (context) => ExperiencePage(),
         skillsPage: (context) => SkillsPage(),
         congratsPage: (context) => CongratsPage(),
-        forgetPage: (context) => ForgetPage(),
-        recoverPage: (context) => RecoverPage(),
-        resetPassword: (context) => ResetPassword(),
+        forgetPage: (context) => ForgetPasswordPage(),
+        recoverPage: (context) => RecoverPasswordPage(),
+        resetPassword: (context) => ResetPasswordPage(),
         mainPage: (context) => MainPage(),
         tipPage: (context) => TipPage(),
         applicationPage: (context) => ApplicationPage(),
         profilePage: (context) => ProfilePage(),
-        profileView: (context) => ProfileView(),
-        userInfo: (context) => UserInfo(),
-        secondMainPage: (context) => SecondMainPage(),
+        profileView: (context) => ViewProfilePage(),
+        userInfo: (context) => UserStatus(),
+        secondMainPage: (context) => EmployerMainPage(),
       },
     );
   }

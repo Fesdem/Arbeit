@@ -2,8 +2,8 @@ import 'package:arbeit/constants/routes.dart';
 import 'package:arbeit/styles/app_colors.dart';
 import 'package:flutter/material.dart';
 
-class FirstPage extends StatelessWidget {
-  const FirstPage({super.key});
+class FirstSplashPage extends StatelessWidget {
+  const FirstSplashPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class FirstPage extends StatelessWidget {
             Container(
               height: 465,
               color: Colors.blue[50],
-              child: Image.asset('asset/images/Rectangle (1).png'),
+              child: Image.asset('asset/images/fir_rectangle.png'),
             ),
             SizedBox(height: 40),
             Text(

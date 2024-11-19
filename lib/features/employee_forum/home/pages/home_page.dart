@@ -1,13 +1,21 @@
-import 'package:arbeit/pages/tip_page_fifteen.dart';
+import 'package:arbeit/features/employee_forum/home/pages/tip_page.dart';
 import 'package:arbeit/styles/app_colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
-class SecondHomePage extends StatelessWidget {
-  const SecondHomePage({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
   Widget build(BuildContext context) {
+    MediaQuery.of(context).size.height;
+    MediaQuery.of(context).size.width;
+
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
@@ -20,7 +28,7 @@ class SecondHomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'Hello, Pratt!',
+                      'Hello, Cole!',
                       style: TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 20,
@@ -55,7 +63,7 @@ class SecondHomePage extends StatelessWidget {
                           decoration: InputDecoration(
                             contentPadding: EdgeInsets.all(10),
                             border: InputBorder.none,
-                            hintText: 'Search',
+                            hintText: 'Search jobs, positions............',
                             hintStyle: TextStyle(
                               fontWeight: FontWeight.w400,
                               color: AppColors.hintStyle,
@@ -82,7 +90,7 @@ class SecondHomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'Hiring',
+                      'Daily Job Tips',
                       style: TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 15,
@@ -131,7 +139,7 @@ class SecondHomePage extends StatelessWidget {
                           child: Stack(
                             children: [
                               Image.asset(
-                                'asset/images/job_tips_4.png',
+                                'asset/images/sec_job_tip.png',
                                 height: 124,
                                 width: 200,
                                 fit: BoxFit.cover,
@@ -141,11 +149,11 @@ class SecondHomePage extends StatelessWidget {
                                 left: 42,
                                 right: 35,
                                 child: Text(
-                                  'How to know a competent applicant',
+                                  'How to build a strong online and PDF portfolio',
                                   style: TextStyle(
                                     fontWeight: FontWeight.w600,
                                     fontSize: 10,
-                                    color: AppColors.backgroundColor,
+                                    color: AppColors.primary,
                                   ),
                                 ),
                               ),
@@ -160,7 +168,7 @@ class SecondHomePage extends StatelessWidget {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20)),
                         child: Image.asset(
-                          'asset/images/job_tips_3.png',
+                          'asset/images/thir_job_tip.png',
                           height: 124,
                           width: 200,
                           fit: BoxFit.cover,
@@ -174,7 +182,7 @@ class SecondHomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'Applications',
+                      'Recommended for you',
                       style: TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 15,

@@ -1,10 +1,10 @@
-import 'package:arbeit/pages/forgot_page_twelve.dart';
+import 'package:arbeit/features/auth/pages/recover_password_page.dart';
 import 'package:flutter/material.dart';
 import 'package:arbeit/styles/app_colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class ForgetPage extends StatelessWidget {
-  const ForgetPage({super.key});
+class ForgetPasswordPage extends StatelessWidget {
+  const ForgetPasswordPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -82,7 +82,7 @@ class ForgetPage extends StatelessWidget {
               GestureDetector(
                 onTap: () {
                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => RecoverPage()));
+                      MaterialPageRoute(builder: (context) => RecoverPasswordPage()));
                 },
                 child: Container(
                     height: 47,

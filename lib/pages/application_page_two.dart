@@ -118,7 +118,7 @@ class SecondApplicationPage extends StatelessWidget {
                   SizedBox(width: 15),
                   GestureDetector(
                     onTap: () {
-                      // Navigator.of(context).
+                      
                     },
                     child: Container(
                       height: 29,

@@ -1,17 +1,17 @@
 import 'package:arbeit/pages/application_page_two.dart';
-import 'package:arbeit/pages/home_page_two.dart';
-import 'package:arbeit/pages/profile_page_seventeen.dart';
+import 'package:arbeit/features/employer_forum/home/employer_home_page.dart';
+import 'package:arbeit/features/profile/pages/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class SecondMainPage extends StatefulWidget {
-  const SecondMainPage({super.key});
+class EmployerMainPage extends StatefulWidget {
+  const EmployerMainPage({super.key});
 
   @override
-  State<SecondMainPage> createState() => _SecondMainPageState();
+  State<EmployerMainPage> createState() => _EmployerMainPageState();
 }
 
-class _SecondMainPageState extends State<SecondMainPage> {
+class _EmployerMainPageState extends State<EmployerMainPage> {
   int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
@@ -49,7 +49,7 @@ class _SecondMainPageState extends State<SecondMainPage> {
   }
 
   final pages = [
-    SecondHomePage(),
+    EmployerHomePage(),
     SecondApplicationPage(),
     Center(child: Text('Messages')),
     ProfilePage(),

@@ -1,4 +1,4 @@
-import 'package:arbeit/pages/main_page_fourteen.dart';
+import 'package:arbeit/features/employee_forum/main_page.dart';
 import 'package:flutter/material.dart';
 import 'package:arbeit/styles/app_colors.dart';
 

@@ -1,17 +1,17 @@
-import 'package:arbeit/pages/profile_page7.dart';
+import 'package:arbeit/features/auth/pages/profile_info.dart/education_info_page.dart';
 import 'package:arbeit/styles/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:linear_progress_bar/linear_progress_bar.dart';
 
-class CompletionPage extends StatefulWidget {
-  const CompletionPage({super.key});
+class PersonalInfoPage extends StatefulWidget {
+  const PersonalInfoPage({super.key});
 
   @override
-  State<CompletionPage> createState() => _CompletionPageState();
+  State<PersonalInfoPage> createState() => _PersonalInfoPageState();
 }
 
-class _CompletionPageState extends State<CompletionPage> {
+class _PersonalInfoPageState extends State<PersonalInfoPage> {
   final List<String> genderItems = [
     'Male',
     'Female',
@@ -36,7 +36,8 @@ class _CompletionPageState extends State<CompletionPage> {
                   width: double.infinity,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    border: Border.all(width: 1, color: AppColors.elevatedButtonColor),
+                    border: Border.all(
+                        width: 1, color: AppColors.elevatedButtonColor),
                   ),
                   child: LinearProgressBar(
                     progressType: LinearProgressBar.progressTypeLinear,
@@ -393,7 +394,7 @@ class _CompletionPageState extends State<CompletionPage> {
                 GestureDetector(
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => EducationPage()));
+                        builder: (context) => EducationInfoPage()));
                   },
                   child: Container(
                       height: 47,

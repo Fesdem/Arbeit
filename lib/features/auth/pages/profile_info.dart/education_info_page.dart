@@ -1,17 +1,17 @@
-import 'package:arbeit/pages/experience_page_eight.dart';
+import 'package:arbeit/features/auth/pages/profile_info.dart/experience_page.dart';
 import 'package:arbeit/styles/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:linear_progress_bar/linear_progress_bar.dart';
 
-class EducationPage extends StatefulWidget {
-  const EducationPage({super.key});
+class EducationInfoPage extends StatefulWidget {
+  const EducationInfoPage({super.key});
 
   @override
-  State<EducationPage> createState() => _EducationPageState();
+  State<EducationInfoPage> createState() => _EducationInfoPageState();
 }
 
-class _EducationPageState extends State<EducationPage> {
+class _EducationInfoPageState extends State<EducationInfoPage> {
   @override
   Widget build(BuildContext context) {
     MediaQuery.of(context).size.height;

@@ -1,4 +1,4 @@
-import 'package:arbeit/pages/profile_view_eighteen.dart';
+import 'package:arbeit/features/profile/pages/view_profile_page.dart';
 import 'package:arbeit/pages/resources_page_nineteen.dart';
 import 'package:arbeit/pages/settings_page_twenty.dart';
 import 'package:arbeit/styles/app_colors.dart';
@@ -83,7 +83,7 @@ class ProfilePage extends StatelessWidget {
                 child: GestureDetector(
                   onTap: () {
                     Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => ProfileView()));
+                        MaterialPageRoute(builder: (context) => ViewProfilePage()));
                   },
                   child: Container(
                     height: 54,

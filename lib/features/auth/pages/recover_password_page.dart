@@ -4,8 +4,8 @@ import 'package:arbeit/styles/app_colors.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class RecoverPage extends StatelessWidget {
-  const RecoverPage({super.key});
+class RecoverPasswordPage extends StatelessWidget {
+  const RecoverPasswordPage({super.key});
 
   @override
   Widget build(BuildContext context) {

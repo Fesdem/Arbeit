@@ -1,12 +1,12 @@
-import 'package:arbeit/pages/company_profile_page.dart';
-import 'package:arbeit/pages/profile_page6.dart';
+import 'package:arbeit/features/employer_forum/company_info/company_profile_page.dart';
+import 'package:arbeit/features/auth/pages/profile_info.dart/personal_info_page.dart';
 
 import 'package:arbeit/styles/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class UserInfo extends StatelessWidget {
-  const UserInfo({super.key});
+class UserStatus extends StatelessWidget {
+  const UserStatus({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +48,7 @@ class UserInfo extends StatelessWidget {
                           child: GestureDetector(
                             onTap: () {
                               Navigator.of(context).push(MaterialPageRoute(
-                                  builder: ((context) => CompletionPage())));
+                                  builder: ((context) => PersonalInfoPage())));
                             },
                             child: Container(
                               height: 135,
