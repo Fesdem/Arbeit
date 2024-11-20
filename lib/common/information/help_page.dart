@@ -1,7 +1,7 @@
-import 'package:arbeit/pages/arbeit_info_twentysix.dart';
-import 'package:arbeit/pages/faq_page_twentysix.dart';
-import 'package:arbeit/pages/policy_page_twentyfive.dart';
-import 'package:arbeit/pages/terms_page_twentyfour.dart';
+import 'package:arbeit/common/information/app_info.dart';
+import 'package:arbeit/common/information/faq_page.dart';
+import 'package:arbeit/common/information/policy_page.dart';
+import 'package:arbeit/common/information/terms_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

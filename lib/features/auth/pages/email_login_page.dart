@@ -1,9 +1,9 @@
-import 'package:arbeit/constants/routes.dart';
+import 'package:arbeit/routes.dart';
 import 'package:arbeit/features/auth/pages/forgot_password_page.dart';
-import 'package:arbeit/pages/policy_page_twentyfive.dart';
-import 'package:arbeit/pages/terms_page_twentyfour.dart';
-import 'package:arbeit/pages/user_information_two.dart';
-import 'package:arbeit/styles/app_colors.dart';
+import 'package:arbeit/common/information/policy_page.dart';
+import 'package:arbeit/common/information/terms_page.dart';
+import 'package:arbeit/features/user_information.dart';
+import 'package:arbeit/common/constants/styles/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -90,11 +90,14 @@ class EmailLoginPage extends StatelessWidget {
                 SizedBox(height: 15),
                 ElevatedButton(
                     onPressed: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: ((context) => SecondUserInformationPage())));
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: ((context) => UserStatusPage()),
+                        ),
+                      );
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: AppColors.primary2,
+                      backgroundColor: AppColors.tertiary,
                       minimumSize: Size(321, 48),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(10)),

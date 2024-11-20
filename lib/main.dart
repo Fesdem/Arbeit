@@ -1,6 +1,6 @@
-import 'package:arbeit/constants/animations/first_splash_page.dart';
-import 'package:arbeit/constants/animations/welcome_splash_page.dart';
-import 'package:arbeit/constants/routes.dart';
+import 'package:arbeit/common/animations/splash_page.dart';
+import 'package:arbeit/common/animations/welcome_splash_page.dart';
+import 'package:arbeit/routes.dart';
 import 'package:arbeit/features/employee_forum/application/pages/application_page.dart';
 import 'package:arbeit/features/auth/pages/reg_done_page.dart';
 import 'package:arbeit/features/auth/pages/email_login_page.dart';
@@ -20,8 +20,9 @@ import 'package:arbeit/features/auth/pages/registration_page.dart';
 import 'package:arbeit/features/auth/pages/profile_info.dart/skills_page.dart';
 import 'package:arbeit/features/employee_forum/home/pages/tip_page.dart';
 import 'package:arbeit/features/auth/pages/profile_info.dart/user_status.dart';
-import 'package:arbeit/styles/app_colors.dart';
+import 'package:arbeit/common/constants/styles/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,37 +33,43 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Arbeit Application',
-      theme: ThemeData(
-        scaffoldBackgroundColor: AppColors.backgroundColor,
-        useMaterial3: true,
-      ),
-      initialRoute: firstPage,
-      routes: {
-        firstPage: (context) => FirstSplashPage(),
-        welcomePage: (context) => WelcomeSplashPage(),
-        registrationPage: (context) => RegistrationPage(),
-        loginPage: (context) => LoginPage(),
-        homePage: (context) => HomePage(),
-        emailPage: (context) => EmailLoginPage(),
-        completionPage: (context) => PersonalInfoPage(),
-        educationPage: (context) => EducationInfoPage(),
-        experiencePage: (context) => ExperiencePage(),
-        skillsPage: (context) => SkillsPage(),
-        congratsPage: (context) => CongratsPage(),
-        forgetPage: (context) => ForgetPasswordPage(),
-        recoverPage: (context) => RecoverPasswordPage(),
-        resetPassword: (context) => ResetPasswordPage(),
-        mainPage: (context) => MainPage(),
-        tipPage: (context) => TipPage(),
-        applicationPage: (context) => ApplicationPage(),
-        profilePage: (context) => ProfilePage(),
-        profileView: (context) => ViewProfilePage(),
-        userInfo: (context) => UserStatus(),
-        secondMainPage: (context) => EmployerMainPage(),
-      },
-    );
+    return ScreenUtilInit(
+        designSize: Size(375, 812),
+        minTextAdapt: true,
+        splitScreenMode: true,
+        builder: (context, child) {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: 'Arbeit Application',
+            theme: ThemeData(
+              scaffoldBackgroundColor: AppColors.backgroundColor,
+              useMaterial3: true,
+            ),
+            initialRoute: firstPage,
+            routes: {
+              firstPage: (context) => SplashPage(),
+              welcomePage: (context) => WelcomeSplashPage(),
+              registrationPage: (context) => RegistrationPage(),
+              loginPage: (context) => LoginPage(),
+              homePage: (context) => HomePage(),
+              emailPage: (context) => EmailLoginPage(),
+              completionPage: (context) => PersonalInfoPage(),
+              educationPage: (context) => EducationInfoPage(),
+              experiencePage: (context) => ExperiencePage(),
+              skillsPage: (context) => SkillsPage(),
+              congratsPage: (context) => CongratsPage(),
+              forgetPage: (context) => ForgetPasswordPage(),
+              recoverPage: (context) => RecoverPasswordPage(),
+              resetPassword: (context) => ResetPasswordPage(),
+              mainPage: (context) => MainPage(),
+              tipPage: (context) => TipPage(),
+              applicationPage: (context) => ApplicationPage(),
+              profilePage: (context) => ProfilePage(),
+              profileView: (context) => ViewProfilePage(),
+              userInfo: (context) => UserStatus(),
+              secondMainPage: (context) => EmployerMainPage(),
+            },
+          );
+        });
   }
 }

@@ -1,6 +1,6 @@
 import 'package:arbeit/features/employee_forum/main_page.dart';
 import 'package:flutter/material.dart';
-import 'package:arbeit/styles/app_colors.dart';
+import 'package:arbeit/common/constants/styles/colors.dart';
 
 class CongratsPage extends StatefulWidget {
   const CongratsPage({super.key});

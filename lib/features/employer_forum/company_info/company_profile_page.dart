@@ -1,5 +1,5 @@
-import 'package:arbeit/pages/manager_profile.dart';
-import 'package:arbeit/styles/app_colors.dart';
+import 'package:arbeit/features/employer_forum/company_info/manager_profile.dart';
+import 'package:arbeit/common/constants/styles/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:linear_progress_bar/linear_progress_bar.dart';
 

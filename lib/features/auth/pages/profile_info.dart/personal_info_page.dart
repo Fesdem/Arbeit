@@ -1,5 +1,5 @@
 import 'package:arbeit/features/auth/pages/profile_info.dart/education_info_page.dart';
-import 'package:arbeit/styles/app_colors.dart';
+import 'package:arbeit/common/constants/styles/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:linear_progress_bar/linear_progress_bar.dart';

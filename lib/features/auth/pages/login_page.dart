@@ -1,8 +1,12 @@
-import 'package:arbeit/constants/routes.dart';
-import 'package:arbeit/pages/policy_page_twentyfive.dart';
-import 'package:arbeit/pages/terms_page_twentyfour.dart';
-import 'package:arbeit/styles/app_colors.dart';
+import 'package:arbeit/common/constants/styles/text_styles.dart';
+import 'package:arbeit/common/constants/texts.dart';
+import 'package:arbeit/common/utils/elev_btn_widget.dart';
+import 'package:arbeit/routes.dart';
+import 'package:arbeit/common/information/policy_page.dart';
+import 'package:arbeit/common/information/terms_page.dart';
+import 'package:arbeit/common/constants/styles/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class LoginPage extends StatelessWidget {
@@ -15,102 +19,49 @@ class LoginPage extends StatelessWidget {
 
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.all(23),
+        padding: EdgeInsets.all(23.r),
         child: Column(
           children: [
-            SizedBox(height: 40),
+            SizedBox(height: 40.h),
             Center(
-              child: SvgPicture.asset('asset/svg/logo.svg'),
+              child: SvgPicture.asset(Texts.appLogoPath),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 10.h),
             Text(
-              'Log In to continue',
+              Texts.continueText,
               textAlign: TextAlign.center,
-              style: TextStyle(
-                color: AppColors.primary,
-                fontSize: 10,
-                fontWeight: FontWeight.w600,
+              style: AppTextStyle.subtitleTextStyle,
+            ),
+            SizedBox(height: 50.h),
+            ElevBtn(
+              context: context,
+              buttonAction: () {},
+              bgcolor: AppColors.backgroundColor,
+              child: signInMethod(
+                imagePath: 'asset/svg/google_logo.svg',
+                method: 'Continue with Google',
               ),
             ),
-            SizedBox(height: 50),
-            ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                  minimumSize: Size(327, 48),
-                  backgroundColor: AppColors.backgroundColor,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                  )),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SvgPicture.asset(
-                    'asset/svg/google_logo.svg',
-                    width: 20,
-                    height: 20,
-                  ),
-                  SizedBox(width: 10),
-                  Text(
-                    'Continue with Google',
-                    style: TextStyle(
-                      color: AppColors.primary,
-                      fontSize: 12,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                ],
+            SizedBox(height: 24.h),
+            ElevBtn(
+              context: context,
+              buttonAction: () {},
+              bgcolor: AppColors.backgroundColor,
+              child: signInMethod(
+                imagePath: 'asset/svg/facebook_logo.svg',
+                method: 'Continue with Facebook',
               ),
             ),
-            SizedBox(height: 24),
-            ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                  minimumSize: Size(327, 48),
-                  backgroundColor: AppColors.backgroundColor,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                  )),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SvgPicture.asset(
-                    'asset/svg/facebook_logo.svg',
-                    width: 20,
-                    height: 20,
-                  ),
-                  SizedBox(width: 10),
-                  Text(
-                    'Continue with Facebook',
-                    style: TextStyle(
-                      color: AppColors.primary,
-                      fontSize: 12,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                ],
+            SizedBox(height: 24.h),
+            ElevBtn(
+              context: context,
+              buttonAction: () {},
+              bgcolor: AppColors.tertiary,
+              child: signInMethod(
+                method: 'Log In with E-mail',
               ),
             ),
-            SizedBox(height: 25),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pushReplacementNamed(emailPage);
-              },
-              style: ElevatedButton.styleFrom(
-                  minimumSize: Size(327, 48),
-                  backgroundColor: AppColors.primary2,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                  )),
-              child: Text(
-                'Log In with E-mail',
-                style: TextStyle(
-                  color: AppColors.backgroundColor,
-                  fontSize: 12,
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-            ),
-            SizedBox(height: 40),
+            SizedBox(height: 40.h),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -194,4 +145,31 @@ class LoginPage extends StatelessWidget {
       ),
     );
   }
+}
+
+Widget signInMethod({
+  String? imagePath,
+  required String method,
+}) {
+  return Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      imagePath != null
+          ? SvgPicture.asset(
+              imagePath,
+              width: 20,
+              height: 20,
+            )
+          : const SizedBox(),
+      SizedBox(width: 10),
+      Text(
+        method,
+        style: TextStyle(
+          color: AppColors.primary,
+          fontSize: 12,
+          fontWeight: FontWeight.w700,
+        ),
+      ),
+    ],
+  );
 }

@@ -1,8 +1,8 @@
-import 'package:arbeit/pages/appearance_page.dart';
-import 'package:arbeit/pages/help_page_twentythree.dart';
-import 'package:arbeit/pages/notification_page.dart';
-import 'package:arbeit/pages/security_page_twentytwo.dart';
-import 'package:arbeit/styles/app_colors.dart';
+import 'package:arbeit/common/information/appearance_page.dart';
+import 'package:arbeit/common/information/help_page.dart';
+import 'package:arbeit/common/information/notification_page.dart';
+import 'package:arbeit/common/information/security_page.dart';
+import 'package:arbeit/common/constants/styles/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

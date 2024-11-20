@@ -1,11 +1,11 @@
 import 'package:arbeit/features/employee_forum/main_page.dart';
 import 'package:arbeit/features/employer_forum/employer_main_page.dart';
-import 'package:arbeit/styles/app_colors.dart';
+import 'package:arbeit/common/constants/styles/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class SecondUserInformationPage extends StatelessWidget {
-  const SecondUserInformationPage({super.key});
+class UserStatusPage extends StatelessWidget {
+  const UserStatusPage({super.key});
 
   @override
   Widget build(BuildContext context) {

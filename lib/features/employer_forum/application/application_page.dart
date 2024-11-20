@@ -1,14 +1,14 @@
-import 'package:arbeit/styles/app_colors.dart';
+import 'package:arbeit/common/constants/styles/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class SecondApplicationPage extends StatelessWidget {
-  const SecondApplicationPage({super.key});
+class ApplicationPage extends StatelessWidget {
+  const ApplicationPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
+        body: SafeArea(
       child: Padding(
         padding: const EdgeInsets.fromLTRB(24, 0, 0, 0),
         child: Column(
@@ -117,9 +117,7 @@ class SecondApplicationPage extends StatelessWidget {
                   ),
                   SizedBox(width: 15),
                   GestureDetector(
-                    onTap: () {
-                      
-                    },
+                    onTap: () {},
                     child: Container(
                       height: 29,
                       width: 70,
@@ -130,7 +128,7 @@ class SecondApplicationPage extends StatelessWidget {
                               width: 1, color: AppColors.elevatedButtonColor)),
                       child: Center(
                         child: Text(
-                          'Interivew',
+                          'Interview',
                           style: TextStyle(
                             fontWeight: FontWeight.w600,
                             fontSize: 10,
@@ -182,10 +180,9 @@ class SecondApplicationPage extends StatelessWidget {
                         child: Text(
                           'Rejected',
                           style: TextStyle(
-                            fontWeight: FontWeight.w600,
-                            fontSize: 10,
-                            color: AppColors.elevatedButtonColor
-                          ),
+                              fontWeight: FontWeight.w600,
+                              fontSize: 10,
+                              color: AppColors.elevatedButtonColor),
                         ),
                       ),
                     ),
@@ -196,7 +193,6 @@ class SecondApplicationPage extends StatelessWidget {
           ],
         ),
       ),
-    )
-    );
+    ));
   }
 }

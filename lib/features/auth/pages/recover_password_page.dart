@@ -1,6 +1,6 @@
-import 'package:arbeit/constants/routes.dart';
+import 'package:arbeit/routes.dart';
 import 'package:flutter/material.dart';
-import 'package:arbeit/styles/app_colors.dart';
+import 'package:arbeit/common/constants/styles/colors.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

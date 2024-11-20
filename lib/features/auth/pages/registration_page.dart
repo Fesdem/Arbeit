@@ -1,8 +1,8 @@
-import 'package:arbeit/constants/routes.dart';
-import 'package:arbeit/pages/policy_page_twentyfive.dart';
-import 'package:arbeit/pages/terms_page_twentyfour.dart';
+import 'package:arbeit/routes.dart';
+import 'package:arbeit/common/information/policy_page.dart';
+import 'package:arbeit/common/information/terms_page.dart';
 import 'package:arbeit/features/auth/pages/profile_info.dart/user_status.dart';
-import 'package:arbeit/styles/app_colors.dart';
+import 'package:arbeit/common/constants/styles/colors.dart';
 import 'package:flutter/material.dart';
 
 class RegistrationPage extends StatelessWidget {
@@ -238,7 +238,7 @@ class RegistrationPage extends StatelessWidget {
                         },
                         child: Text('Log In',
                             style: TextStyle(
-                              color: AppColors.primary2,
+                              color: AppColors.tertiary,
                               fontSize: 12,
                               fontWeight: FontWeight.w700,
                             ))),

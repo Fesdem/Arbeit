@@ -1,7 +1,7 @@
 import 'package:arbeit/features/employer_forum/company_info/company_profile_page.dart';
 import 'package:arbeit/features/auth/pages/profile_info.dart/personal_info_page.dart';
 
-import 'package:arbeit/styles/app_colors.dart';
+import 'package:arbeit/common/constants/styles/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 

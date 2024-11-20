@@ -1,4 +1,4 @@
-import 'package:arbeit/pages/application_page_two.dart';
+import 'package:arbeit/features/employer_forum/application/application_page.dart';
 import 'package:arbeit/features/employer_forum/home/employer_home_page.dart';
 import 'package:arbeit/features/profile/pages/profile_page.dart';
 import 'package:flutter/material.dart';
@@ -50,7 +50,7 @@ class _EmployerMainPageState extends State<EmployerMainPage> {
 
   final pages = [
     EmployerHomePage(),
-    SecondApplicationPage(),
+    ApplicationPage(),
     Center(child: Text('Messages')),
     ProfilePage(),
   ];

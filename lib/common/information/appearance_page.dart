@@ -13,7 +13,7 @@ class AppearancePage extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: 30),
-               Row(
+              Row(
                 children: [
                   IconButton(
                       onPressed: () {
@@ -39,21 +39,23 @@ class AppearancePage extends StatelessWidget {
               SizedBox(height: 40),
               Align(
                 alignment: Alignment.centerLeft,
-                child: Text('Light Mode',
-                style: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  fontSize: 15,
-                ),
+                child: Text(
+                  'Light Mode',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 15,
+                  ),
                 ),
               ),
               SizedBox(height: 32),
               Align(
                 alignment: Alignment.centerLeft,
-                child: Text('Use Device Setting',
-                style: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  fontSize: 15,
-                ),
+                child: Text(
+                  'Use Device Setting',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 15,
+                  ),
                 ),
               ),
             ],

@@ -1,7 +1,7 @@
 import 'package:arbeit/features/profile/pages/view_profile_page.dart';
-import 'package:arbeit/pages/resources_page_nineteen.dart';
-import 'package:arbeit/pages/settings_page_twenty.dart';
-import 'package:arbeit/styles/app_colors.dart';
+import 'package:arbeit/common/information/resources_page.dart';
+import 'package:arbeit/common/information/settings_page.dart';
+import 'package:arbeit/common/constants/styles/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
