@@ -1,6 +1,8 @@
 import 'package:arbeit/common/constants/styles/text_styles.dart';
 import 'package:arbeit/common/constants/texts.dart';
 import 'package:arbeit/common/utils/elev_btn_widget.dart';
+import 'package:arbeit/common/utils/text_btn_widget.dart';
+import 'package:arbeit/features/widgets/title_widget.dart';
 import 'package:arbeit/routes.dart';
 import 'package:arbeit/common/information/policy_page.dart';
 import 'package:arbeit/common/information/terms_page.dart';
@@ -14,18 +16,13 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    MediaQuery.of(context).size.height;
-    MediaQuery.of(context).size.width;
-
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.all(23.r),
         child: Column(
           children: [
             SizedBox(height: 40.h),
-            Center(
-              child: SvgPicture.asset(Texts.appLogoPath),
-            ),
+            AppTitle(),
             SizedBox(height: 10.h),
             Text(
               Texts.continueText,
@@ -38,8 +35,8 @@ class LoginPage extends StatelessWidget {
               buttonAction: () {},
               bgcolor: AppColors.backgroundColor,
               child: signInMethod(
-                imagePath: 'asset/svg/google_logo.svg',
-                method: 'Continue with Google',
+                imagePath: Texts.googleImagePath,
+                method: Texts.googleContinueText,
               ),
             ),
             SizedBox(height: 24.h),
@@ -48,17 +45,19 @@ class LoginPage extends StatelessWidget {
               buttonAction: () {},
               bgcolor: AppColors.backgroundColor,
               child: signInMethod(
-                imagePath: 'asset/svg/facebook_logo.svg',
-                method: 'Continue with Facebook',
+                imagePath: Texts.facebookImagePath,
+                method: Texts.facebookContinueText,
               ),
             ),
             SizedBox(height: 24.h),
             ElevBtn(
               context: context,
-              buttonAction: () {},
+              buttonAction: () {
+                Navigator.of(context).pushReplacementNamed(emailPage);
+              },
               bgcolor: AppColors.tertiary,
               child: signInMethod(
-                method: 'Log In with E-mail',
+                method: Texts.emailLoginText,
               ),
             ),
             SizedBox(height: 40.h),
@@ -66,55 +65,44 @@ class LoginPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Don't have an account?",
-                  style: TextStyle(
-                    color: AppColors.secondary,
-                    fontSize: 12,
-                    fontWeight: FontWeight.w600,
+                  Texts.statusQueryText,
+                  style: AppTextStyle.secElevTextStyle,
+                ),
+                TextBtn(
+                  context: context,
+                  buttonAction: () {
+                    Navigator.of(context)
+                        .pushReplacementNamed(registrationPage);
+                  },
+                  child: Text(
+                    Texts.newText,
+                    style: AppTextStyle.primElevTextStyle,
                   ),
                 ),
-                TextButton(
-                    onPressed: () {
-                      Navigator.of(context)
-                          .pushReplacementNamed(registrationPage);
-                    },
-                    child: Text(
-                      'Register Here',
-                      style: TextStyle(
-                        color: AppColors.elevatedButtonColor,
-                        fontSize: 12,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    )),
               ],
             ),
             SizedBox(height: 40),
             Center(
               child: Text(
-                "By creating an account, you accept Job finder’s",
-                style: TextStyle(
-                  color: AppColors.secondary,
-                  fontSize: 12,
-                  fontWeight: FontWeight.w400,
-                ),
+                Texts.firTermText,
+                style: AppTextStyle.terElevTextStyle,
               ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                TextButton(
-                    onPressed: () {
-                      Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => TermsPage()));
-                    },
-                    child: Text(
-                      'Terms of Service',
-                      style: TextStyle(
-                        color: AppColors.elevatedButtonColor,
-                        fontSize: 12,
-                        fontWeight: FontWeight.w400,
-                      ),
-                    )),
+                TextBtn(
+                  context: context,
+                  buttonAction: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => TermsPage()),
+                    );
+                  },
+                  child: Text(
+                    Texts.termText,
+                    style: AppTextStyle.terElevTextStyle,
+                  ),
+                ),
                 SizedBox(width: 3),
                 Text(
                   'and',
@@ -125,19 +113,17 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(width: 3),
-                TextButton(
-                    onPressed: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => PolicyPage()));
-                    },
-                    child: Text(
-                      'Privacy Policy',
-                      style: TextStyle(
-                        color: AppColors.elevatedButtonColor,
-                        fontSize: 12,
-                        fontWeight: FontWeight.w400,
-                      ),
-                    )),
+                TextBtn(
+                  context: context,
+                  buttonAction: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => PolicyPage()));
+                  },
+                  child: Text(
+                    Texts.privacyText,
+                    style: AppTextStyle.terElevTextStyle,
+                  ),
+                ),
               ],
             ),
           ],
@@ -164,11 +150,7 @@ Widget signInMethod({
       SizedBox(width: 10),
       Text(
         method,
-        style: TextStyle(
-          color: AppColors.primary,
-          fontSize: 12,
-          fontWeight: FontWeight.w700,
-        ),
+        style: AppTextStyle.secElevTextStyle,
       ),
     ],
   );

@@ -23,7 +23,7 @@ class AppTextStyle {
     color: AppColors.tertiary,
     fontWeight: FontWeight.w700,
   );
-  static TextStyle subtitle2 = TextStyle(
+  static TextStyle terElevTextStyle = TextStyle(
     fontSize: 12.sp,
     fontWeight: FontWeight.w400,
   );
@@ -31,12 +31,14 @@ class AppTextStyle {
     fontSize: 10.sp,
     fontWeight: FontWeight.w400,
   );
-  static TextStyle subtitle4 = TextStyle(
-    fontSize: 10.sp,
-    fontWeight: FontWeight.w500,
-  );
-  static TextStyle subtitle5 = TextStyle(
+  static TextStyle primElevTextStyle = TextStyle(
     fontSize: 12.sp,
-    fontWeight: FontWeight.w600,
+    color: AppColors.tertiary,
+    fontWeight: FontWeight.w700,
+  );
+  static TextStyle secElevTextStyle = TextStyle(
+    fontSize: 12.sp,
+    color: AppColors.primary,
+    fontWeight: FontWeight.w700,
   );
 }
