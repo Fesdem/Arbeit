@@ -95,7 +95,7 @@ class ProfilePage extends StatelessWidget {
                       ),
                       border: Border.all(
                         width: 1,
-                        color: AppColors.elevatedButtonColor,
+                        color: AppColors.tertiary,
                       ),
                     ),
                     child: Row(
@@ -132,7 +132,7 @@ class ProfilePage extends StatelessWidget {
                     ),
                     border: Border.all(
                       width: 1,
-                      color: AppColors.elevatedButtonColor,
+                      color: AppColors.tertiary,
                     ),
                   ),
                   child: Row(
@@ -173,7 +173,7 @@ class ProfilePage extends StatelessWidget {
                       ),
                       border: Border.all(
                         width: 1,
-                        color: AppColors.elevatedButtonColor,
+                        color: AppColors.tertiary,
                       ),
                     ),
                     child: Row(
@@ -215,7 +215,7 @@ class ProfilePage extends StatelessWidget {
                       ),
                       border: Border.all(
                         width: 1,
-                        color: AppColors.elevatedButtonColor,
+                        color: AppColors.tertiary,
                       ),
                     ),
                     child: Row(
@@ -252,7 +252,7 @@ class ProfilePage extends StatelessWidget {
                     ),
                     border: Border.all(
                       width: 1,
-                      color: AppColors.elevatedButtonColor,
+                      color: AppColors.tertiary,
                     ),
                   ),
                   child: Row(

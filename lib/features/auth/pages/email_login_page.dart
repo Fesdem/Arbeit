@@ -1,11 +1,16 @@
+import 'package:arbeit/common/constants/styles/text_styles.dart';
+import 'package:arbeit/common/constants/texts.dart';
+import 'package:arbeit/common/utils/elev_btn_widget.dart';
+import 'package:arbeit/common/utils/field_widget.dart';
+import 'package:arbeit/common/utils/text_btn_widget.dart';
+import 'package:arbeit/features/widgets/title_widget.dart';
 import 'package:arbeit/routes.dart';
-import 'package:arbeit/features/auth/pages/forgot_password_page.dart';
 import 'package:arbeit/common/information/policy_page.dart';
 import 'package:arbeit/common/information/terms_page.dart';
 import 'package:arbeit/features/user_information.dart';
 import 'package:arbeit/common/constants/styles/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class EmailLoginPage extends StatelessWidget {
   const EmailLoginPage({super.key});
@@ -20,128 +25,86 @@ class EmailLoginPage extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.all(26),
+            padding: EdgeInsets.all(26.r),
             child: Column(
               children: [
-                SizedBox(height: 86),
-                Center(
-                  child: SvgPicture.asset('asset/svg/logo.svg'),
-                ),
-                SizedBox(height: 10),
+                SizedBox(height: 86.h),
+                AppTitle(),
+                SizedBox(height: 10.h),
                 Text(
-                  'Log into your account',
+                  Texts.accLoginText,
                   textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: AppColors.primary,
-                    fontSize: 10,
-                    fontWeight: FontWeight.w600,
+                  style: AppTextStyle.subtitleTextStyle,
+                ),
+                SizedBox(height: 50.h),
+                Field(
+                  hint: Texts.emailReqText,
+                  hintStyle: AppTextStyle.secTertElevTextStyle,
+                  isSeen: true,
+                ),
+                SizedBox(height: 15.h),
+                Field(
+                  hint: Texts.passReqText,
+                  hintStyle: AppTextStyle.secTertElevTextStyle,
+                  isSeen: true,
+                ),
+                SizedBox(height: 15.h),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: TextBtn(
+                    context: context,
+                    buttonAction: () {},
+                    child: Text(
+                      Texts.forgotText,
+                      style: AppTextStyle.terTextStyle,
+                    ),
                   ),
                 ),
-                SizedBox(height: 50),
-                TextField(
-                  decoration: InputDecoration(
-                      hintText: 'E-mail (Required)',
-                      hintStyle: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        color: AppColors.hintStyle,
-                        fontSize: 12,
-                      ),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(
-                          10,
-                        )),
-                      )),
-                ),
-                SizedBox(height: 15),
-                TextField(
-                  decoration: InputDecoration(
-                      hintText: 'Password (Required)',
-                      hintStyle: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        color: AppColors.hintStyle,
-                        fontSize: 12,
-                      ),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(
-                          10,
-                        )),
-                      )),
-                ),
-                SizedBox(height: 15),
-                Align(
-                    alignment: Alignment.centerRight,
-                    child: TextButton(
-                      onPressed: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => ForgetPasswordPage(),
-                          ),
-                        );
-                      },
-                      child: Text(
-                        'Forgot Password?',
-                        style: TextStyle(
-                          color: AppColors.secondary,
-                          fontSize: 10,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    )),
-                SizedBox(height: 15),
-                ElevatedButton(
-                    onPressed: () {
+                SizedBox(height: 15.h),
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevBtn(
+                    context: context,
+                    buttonAction: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
                           builder: ((context) => UserStatusPage()),
                         ),
                       );
                     },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: AppColors.tertiary,
-                      minimumSize: Size(321, 48),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(10)),
-                      ),
-                    ),
+                    bgcolor: AppColors.tertiary,
                     child: Text(
-                      'Log in with Email',
-                      style: TextStyle(
-                        color: AppColors.backgroundColor,
-                        fontSize: 12,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    )),
-                SizedBox(height: 40),
+                      Texts.emailLoginText,
+                      style: AppTextStyle.elevatedTextStyle,
+                    ),
+                  ),
+                ),
+                SizedBox(height: 40.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "Don't have an account?",
-                      style: TextStyle(
-                        color: AppColors.secondary,
-                        fontSize: 12,
-                        fontWeight: FontWeight.w600,
-                      ),
+                      Texts.statusQueryText,
+                      style: AppTextStyle.secPrimaryTextStyle,
                     ),
-                    TextButton(
-                        onPressed: () {
-                          Navigator.of(context)
+                   
+                        TextBtn(
+                          context: context,
+                          buttonAction: () {
+                              Navigator.of(context)
                               .pushReplacementNamed(registrationPage);
-                        },
-                        child: Text(
-                          'Register Here',
-                          style: TextStyle(
-                            color: AppColors.elevatedButtonColor,
-                            fontSize: 12,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        )),
+                          },
+                          child: Text(
+                          Texts.newText,
+                          style: AppTextStyle.primElevTextStyle,
+                        ),
+                        ),
                   ],
                 ),
-                SizedBox(height: 40),
+                SizedBox(height: 40.h),
                 Center(
                   child: Text(
-                    'By creating an account, you accept Job finder’s',
+                    Texts.firTermText,
                     style: TextStyle(
                       color: AppColors.secondary,
                       fontSize: 12,
@@ -160,7 +123,7 @@ class EmailLoginPage extends StatelessWidget {
                         child: Text(
                           'Terms of Service',
                           style: TextStyle(
-                            color: AppColors.elevatedButtonColor,
+                            color: AppColors.tertiary,
                             fontSize: 12,
                             fontWeight: FontWeight.w400,
                           ),
@@ -183,7 +146,7 @@ class EmailLoginPage extends StatelessWidget {
                         child: Text(
                           'Privacy Policy',
                           style: TextStyle(
-                            color: AppColors.elevatedButtonColor,
+                            color: AppColors.tertiary,
                             fontSize: 12,
                             fontWeight: FontWeight.w400,
                           ),

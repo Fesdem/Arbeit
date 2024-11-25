@@ -128,10 +128,10 @@ class ResourcesPage extends StatelessWidget {
                       height: 29,
                       width: double.infinity,
                       decoration: BoxDecoration(
-                        color: AppColors.elevatedButtonColor,
+                        color: AppColors.tertiary,
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(
-                            width: 1, color: AppColors.elevatedButtonColor),
+                            width: 1, color: AppColors.tertiary),
                       ),
                       child: Center(
                         child: Text(
@@ -187,7 +187,7 @@ class ResourcesPage extends StatelessWidget {
                         color: AppColors.backgroundColor,
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(
-                            width: 1, color: AppColors.elevatedButtonColor),
+                            width: 1, color: AppColors.tertiary),
                       ),
                       child: Center(
                         child: Text(
@@ -195,7 +195,7 @@ class ResourcesPage extends StatelessWidget {
                           style: TextStyle(
                             fontWeight: FontWeight.w700,
                             fontSize: 12,
-                            color: AppColors.elevatedButtonColor,
+                            color: AppColors.tertiary,
                           ),
                         ),
                       )),

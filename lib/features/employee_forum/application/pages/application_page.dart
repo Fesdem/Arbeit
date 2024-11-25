@@ -59,7 +59,7 @@ class ApplicationPage extends StatelessWidget {
                       fontSize: 12,
                     ),
                     suffixIcon: Icon(Icons.search),
-                    suffixIconColor: AppColors.elevatedButtonColor,
+                    suffixIconColor: AppColors.tertiary,
                   ),
                 ),
               ),
@@ -77,10 +77,10 @@ class ApplicationPage extends StatelessWidget {
                       height: 29,
                       width: 33,
                       decoration: BoxDecoration(
-                          color: AppColors.elevatedButtonColor,
+                          color: AppColors.tertiary,
                           borderRadius: BorderRadius.circular(10),
                           border: Border.all(
-                              width: 1, color: AppColors.elevatedButtonColor)),
+                              width: 1, color: AppColors.tertiary)),
                       child: Center(
                         child: Text(
                           'All',
@@ -105,14 +105,14 @@ class ApplicationPage extends StatelessWidget {
                           color: AppColors.backgroundColor,
                           borderRadius: BorderRadius.circular(10),
                           border: Border.all(
-                              width: 1, color: AppColors.elevatedButtonColor)),
+                              width: 1, color: AppColors.tertiary)),
                       child: Center(
                         child: Text(
                           'Accepted',
                           style: TextStyle(
                             fontWeight: FontWeight.w600,
                             fontSize: 10,
-                            color: AppColors.elevatedButtonColor,
+                            color: AppColors.tertiary,
                           ),
                         ),
                       ),
@@ -130,14 +130,14 @@ class ApplicationPage extends StatelessWidget {
                           color: AppColors.backgroundColor,
                           borderRadius: BorderRadius.circular(10),
                           border: Border.all(
-                              width: 1, color: AppColors.elevatedButtonColor)),
+                              width: 1, color: AppColors.tertiary)),
                       child: Center(
                         child: Text(
                           'Interivew',
                           style: TextStyle(
                             fontWeight: FontWeight.w600,
                             fontSize: 10,
-                            color: AppColors.elevatedButtonColor,
+                            color: AppColors.tertiary,
                           ),
                         ),
                       ),
@@ -155,14 +155,14 @@ class ApplicationPage extends StatelessWidget {
                           color: AppColors.backgroundColor,
                           borderRadius: BorderRadius.circular(10),
                           border: Border.all(
-                              width: 1, color: AppColors.elevatedButtonColor)),
+                              width: 1, color: AppColors.tertiary)),
                       child: Center(
                         child: Text(
                           'In Progress',
                           style: TextStyle(
                             fontWeight: FontWeight.w600,
                             fontSize: 10,
-                            color: AppColors.elevatedButtonColor,
+                            color: AppColors.tertiary,
                           ),
                         ),
                       ),
@@ -180,14 +180,14 @@ class ApplicationPage extends StatelessWidget {
                           color: AppColors.backgroundColor,
                           borderRadius: BorderRadius.circular(10),
                           border: Border.all(
-                              width: 1, color: AppColors.elevatedButtonColor)),
+                              width: 1, color: AppColors.tertiary)),
                       child: Center(
                         child: Text(
                           'Rejected',
                           style: TextStyle(
                             fontWeight: FontWeight.w600,
                             fontSize: 10,
-                            color: AppColors.elevatedButtonColor,
+                            color: AppColors.tertiary,
                           ),
                         ),
                       ),

@@ -39,11 +39,11 @@ class _ExperiencePageState extends State<ExperiencePage> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(
-                        width: 1, color: AppColors.elevatedButtonColor),
+                        width: 1, color: AppColors.tertiary),
                   ),
                   child: LinearProgressBar(
                     progressType: LinearProgressBar.progressTypeLinear,
-                    progressColor: AppColors.elevatedButtonColor,
+                    progressColor: AppColors.tertiary,
                     backgroundColor: AppColors.secondary3,
                     minHeight: 12,
                     currentStep: 3,
@@ -246,10 +246,10 @@ class _ExperiencePageState extends State<ExperiencePage> {
                       height: 47,
                       width: double.infinity,
                       decoration: BoxDecoration(
-                        color: AppColors.elevatedButtonColor,
+                        color: AppColors.tertiary,
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(
-                            width: 1, color: AppColors.elevatedButtonColor),
+                            width: 1, color: AppColors.tertiary),
                       ),
                       child: Center(
                         child: Text(

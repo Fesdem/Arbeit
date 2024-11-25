@@ -38,7 +38,7 @@ class SplashPage extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.h),
               child: Text(
-                Texts.splashBodyText,
+                Texts.welcomeBodyText,
                 textAlign: TextAlign.center,
                 style: AppTextStyle.subtitleTextStyle,
               ),
@@ -52,7 +52,7 @@ class SplashPage extends StatelessWidget {
                 buttonAction: () {
                   Navigator.of(context).pushReplacementNamed(welcomePage);
                 },
-                bgcolor: AppColors.elevatedButtonColor,
+                bgcolor: AppColors.tertiary,
                 child: Text(
                   Texts.nextText,
                   style: AppTextStyle.elevatedTextStyle,

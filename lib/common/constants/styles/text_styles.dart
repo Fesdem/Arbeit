@@ -18,7 +18,7 @@ class AppTextStyle {
     color: AppColors.backgroundColor,
     fontWeight: FontWeight.w700,
   );
-   static TextStyle secElevatedTextStyle = TextStyle(
+  static TextStyle secElevatedTextStyle = TextStyle(
     fontSize: 11.sp,
     color: AppColors.tertiary,
     fontWeight: FontWeight.w700,
@@ -27,8 +27,9 @@ class AppTextStyle {
     fontSize: 12.sp,
     fontWeight: FontWeight.w400,
   );
-  static TextStyle subtitle3 = TextStyle(
-    fontSize: 10.sp,
+  static TextStyle secTertElevTextStyle = TextStyle(
+    fontSize: 12.sp,
+    color: AppColors.hintStyle,
     fontWeight: FontWeight.w400,
   );
   static TextStyle primElevTextStyle = TextStyle(
@@ -40,5 +41,16 @@ class AppTextStyle {
     fontSize: 12.sp,
     color: AppColors.primary,
     fontWeight: FontWeight.w700,
+  );
+  static TextStyle terTextStyle = TextStyle(
+    fontSize: 10.sp,
+    color: AppColors.secondary,
+    fontWeight: FontWeight.w500,
+  );
+
+   static TextStyle secPrimaryTextStyle = TextStyle(
+    fontSize: 10.sp,
+    color: AppColors.secondary,
+    fontWeight: FontWeight.w500,
   );
 }

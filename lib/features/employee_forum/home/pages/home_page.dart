@@ -70,7 +70,7 @@ class _HomePageState extends State<HomePage> {
                               fontSize: 12,
                             ),
                             suffixIcon: Icon(Icons.search),
-                            suffixIconColor: AppColors.elevatedButtonColor,
+                            suffixIconColor: AppColors.tertiary,
                           ),
                         ),
                       ),
@@ -103,7 +103,7 @@ class _HomePageState extends State<HomePage> {
                           style: TextStyle(
                             fontWeight: FontWeight.w400,
                             fontSize: 12,
-                            color: AppColors.elevatedButtonColor,
+                            color: AppColors.tertiary,
                           ),
                         )),
                   ],
@@ -195,7 +195,7 @@ class _HomePageState extends State<HomePage> {
                           style: TextStyle(
                             fontWeight: FontWeight.w400,
                             fontSize: 12,
-                            color: AppColors.elevatedButtonColor,
+                            color: AppColors.tertiary,
                           ),
                         )),
                   ],

@@ -54,7 +54,7 @@ class WelcomeSplashPage extends StatelessWidget {
                     buttonAction: () {
                       Navigator.of(context).pushReplacementNamed(loginPage);
                     },
-                    bgcolor: AppColors.elevatedButtonColor,
+                    bgcolor: AppColors.tertiary,
                     child: Text(
                       Texts.loginText,
                       style: AppTextStyle.elevatedTextStyle,

@@ -50,7 +50,7 @@ class RegistrationPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(
                       width: 1,
-                      color: AppColors.elevatedButtonColor,
+                      color: AppColors.tertiary,
                     ),
                   ),
                   child: TextField(
@@ -76,7 +76,7 @@ class RegistrationPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(
                       width: 1,
-                      color: AppColors.elevatedButtonColor,
+                      color: AppColors.tertiary,
                     ),
                   ),
                   child: TextField(
@@ -101,7 +101,7 @@ class RegistrationPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(
                       width: 1,
-                      color: AppColors.elevatedButtonColor,
+                      color: AppColors.tertiary,
                     ),
                   ),
                   child: TextField(
@@ -127,7 +127,7 @@ class RegistrationPage extends StatelessWidget {
                       height: 47,
                       width: double.infinity,
                       decoration: BoxDecoration(
-                        color: AppColors.elevatedButtonColor,
+                        color: AppColors.tertiary,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Center(
@@ -162,7 +162,7 @@ class RegistrationPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                       border: Border.all(
                         width: 1,
-                        color: AppColors.elevatedButtonColor,
+                        color: AppColors.tertiary,
                       ),
                     ),
                     child: Row(
@@ -197,7 +197,7 @@ class RegistrationPage extends StatelessWidget {
                         color: AppColors.backgroundColor,
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(
-                            width: 1, color: AppColors.elevatedButtonColor)),
+                            width: 1, color: AppColors.tertiary)),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -266,7 +266,7 @@ class RegistrationPage extends StatelessWidget {
                         child: Text(
                           'Terms of Service',
                           style: TextStyle(
-                            color: AppColors.elevatedButtonColor,
+                            color: AppColors.tertiary,
                             fontSize: 12,
                             fontWeight: FontWeight.w400,
                           ),
@@ -289,7 +289,7 @@ class RegistrationPage extends StatelessWidget {
                         child: Text(
                           'Privacy Policy',
                           style: TextStyle(
-                            color: AppColors.elevatedButtonColor,
+                            color: AppColors.tertiary,
                             fontSize: 12,
                             fontWeight: FontWeight.w400,
                           ),
